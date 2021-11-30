@@ -19,23 +19,20 @@ const ProjectItem = ({
       data-aos={parity % 2 ? "fade-left" : "fade-right"}
     >
       <div
-        className={
-          "border-2 shadow-lg rounded-md flex relative sm:" +
-          (parity % 2 ? "flex-row" : "flex-row-reverse") +
-          " flex-col"
-        }
+        className={`border-2 shadow-lg rounded-md flex relative sm:${
+          parity % 2 ? "flex-row" : "flex-row-reverse"
+        } flex-col"`}
         style={{ fontFamily: "'Inter'" }}
       >
         <div className="z-10 flex items-center justify-center h-full">
           <img
             src={img}
             alt={name + " thumbnail"}
-            className={
-              "rounded-md w-64 h-40 my-0 md:my-auto md:h-auto mx-auto md:w-80 md:" +
-              (parity % 2
+            className={`rounded-md w-64 h-40 my-0 md:my-auto md:h-auto mx-auto md:w-80 md:${
+              parity % 2
                 ? "rounded-br-none md:rounded-tr-none"
-                : "rounded-bl-none md:rounded-tl-none")
-            }
+                : "rounded-bl-none md:rounded-tl-none"
+            }`}
           />
         </div>
         {herokuWarning && (
@@ -44,10 +41,9 @@ const ProjectItem = ({
               "Sometimes, this project may load slowly,<br/>or not load at all due to Heroku's limited dyno hours!"
             }
             data-for={"tip-" + parity}
-            class={
-              "absolute mt-1 mx-2 z-20 text-red-500 top-0" +
-              (parity % 2 ? " left-0" : " right-0")
-            }
+            className={`absolute mt-1 mx-2 z-20 text-red-500 top-0 ${
+              parity % 2 ? "left-0" : "right-0"
+            }`}
           >
             <FontAwesomeIcon icon={faExclamationCircle} />
           </div>
