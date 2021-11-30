@@ -1,0 +1,20 @@
+#skills-container {
+  min-height: 100vh;
+
+  background-color: #e5e7eb;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23d5dbe3' points='800 100 0 200 0 800 1600 800 1600 200'/%3E%3Cpolygon fill='%23c4d0dc' points='800 200 0 400 0 800 1600 800 1600 400'/%3E%3Cpolygon fill='%23b1c7d6' points='800 300 0 600 0 800 1600 800 1600 600'/%3E%3Cpolygon fill='%239dc1d2' points='1600 800 800 400 0 800'/%3E%3Cpolygon fill='%2387bed0' points='1280 800 800 500 320 800'/%3E%3Cpolygon fill='%2370bfcf' points='533.3 800 1066.7 800 800 600'/%3E%3Cpolygon fill='%2357C6CF' points='684.1 800 914.3 800 800 700'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: local;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 20px;
+  min-height: 100vh;
+}
+
+/* #skills-container::before {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 10px 98vw;
+  border-color: transparent transparent #007bff transparent;
+  content: "";
+} */

@@ -1,0 +1,70 @@
+#navbar-links p:hover {
+  color: #54c3cc;
+  cursor: pointer;
+  border-top: #54c3cc solid 2px;
+  border-bottom: #54c3cc solid 2px;
+}
+
+.nav-item {
+  border-top-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  transition: all 0.1s ease;
+}
+
+.nav-item:hover {
+  cursor: pointer;
+  background-color: theme("colors.gray.800");
+}
+
+.navbar-item-in-view {
+  border-top: #54c3cc solid 2px;
+  border-bottom: #54c3cc solid 2px;
+}
+
+.nav-left-triangle::before {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 74.5px 75px;
+  border-color: transparent transparent theme("colors.gray.900") transparent;
+  content: "";
+  position: absolute;
+  left: -75px;
+}
+
+.nav-left-triangle::after {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 74.5px 75px 0 0;
+  border-color: theme("colors.gray.900") transparent transparent transparent;
+  content: "";
+  position: absolute;
+  right: -75px;
+}
+
+@media only screen and (max-width: 1280px) {
+  .nav-left-triangle::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    left: 0px;
+    bottom: 0px;
+    border-bottom: 0px solid theme("colors.gray.200");
+    border-right: 0px solid transparent;
+    margin: 0px !important;
+  }
+
+  .nav-left-triangle::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    left: 0px;
+    bottom: 0px;
+    border-bottom: 0px solid theme("colors.gray.200");
+    border-right: 0px solid transparent;
+    margin: 0px !important;
+  }
+}
