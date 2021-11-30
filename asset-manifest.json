@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.3cea5a56.chunk.css",
+    "main.js": "/static/js/main.71c303f6.chunk.js",
+    "main.js.map": "/static/js/main.71c303f6.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.9376123b.js",
+    "runtime-main.js.map": "/static/js/runtime-main.9376123b.js.map",
+    "static/js/2.eca9a1c3.chunk.js": "/static/js/2.eca9a1c3.chunk.js",
+    "static/js/2.eca9a1c3.chunk.js.map": "/static/js/2.eca9a1c3.chunk.js.map",
+    "static/js/3.9bc50a26.chunk.js": "/static/js/3.9bc50a26.chunk.js",
+    "static/js/3.9bc50a26.chunk.js.map": "/static/js/3.9bc50a26.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.3cea5a56.chunk.css.map": "/static/css/main.3cea5a56.chunk.css.map",
+    "static/js/2.eca9a1c3.chunk.js.LICENSE.txt": "/static/js/2.eca9a1c3.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/static/media/Valorant.86ec8370.ttf",
+    "static/media/arrows-down.c83880b7.svg": "/static/media/arrows-down.c83880b7.svg",
+    "static/media/codechefdmce.63236a98.jpeg": "/static/media/codechefdmce.63236a98.jpeg",
+    "static/media/gdscdmce.446263b4.jpeg": "/static/media/gdscdmce.446263b4.jpeg",
+    "static/media/geofencing.d4526114.png": "/static/media/geofencing.d4526114.png",
+    "static/media/search-engine.7ef7ff45.png": "/static/media/search-engine.7ef7ff45.png",
+    "static/media/track-your-day.c667e3d7.png": "/static/media/track-your-day.c667e3d7.png",
+    "static/media/yash.13d8f432.jpg": "/static/media/yash.13d8f432.jpg",
+    "static/media/yk-logo.79fac673.svg": "/static/media/yk-logo.79fac673.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9376123b.js",
+    "static/js/2.eca9a1c3.chunk.js",
+    "static/css/main.3cea5a56.chunk.css",
+    "static/js/main.71c303f6.chunk.js"
+  ]
+}
