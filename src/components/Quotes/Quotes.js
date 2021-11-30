@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import "./Quotes.css";
 import quotes from "../../assets/quotes.json";
 
+const idx = Math.floor(Math.random() * quotes.length);
+
 const Quotes = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -17,7 +19,6 @@ const Quotes = () => {
       clearTimeout(waifuTimer);
     };
   }, []);
-  const idx = Math.floor(Math.random() * quotes.length);
 
   return (
     <div

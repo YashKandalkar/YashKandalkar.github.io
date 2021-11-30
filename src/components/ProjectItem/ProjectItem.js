@@ -20,8 +20,9 @@ const ProjectItem = ({
     >
       <div
         className={
-          "border-2 shadow-lg rounded-md flex relative flex-col md:" +
-          (parity % 2 ? "flex-row" : "flex-row-reverse")
+          "border-2 shadow-lg rounded-md flex relative sm:" +
+          (parity % 2 ? "flex-row" : "flex-row-reverse") +
+          " flex-col"
         }
         style={{ fontFamily: "'Inter'" }}
       >
@@ -52,7 +53,7 @@ const ProjectItem = ({
           </div>
         )}
         <div
-          className="flex flex-col flex-grow text-left py-2 px-4 sm:w-96"
+          className="flex flex-col flex-grow text-left py-2 px-4"
           style={{ maxWidth: 400, backdropFilter: "blur(3px)" }}
         >
           <span className="flex flex-col sm:flex-row justify-between">
