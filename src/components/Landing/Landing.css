@@ -67,25 +67,25 @@
 
 body[data-aos-delay="11800"] [data-aos],
 [data-aos][data-aos][data-aos-delay="11800"] {
-  transition-delay: 11200ms;
+  transition-delay: 10400ms;
 }
 
 body[data-aos-delay="12000"] [data-aos],
 [data-aos][data-aos][data-aos-delay="12000"] {
-  transition-delay: 11400ms;
+  transition-delay: 10600ms;
 }
 
 body[data-aos-delay="12200"] [data-aos],
 [data-aos][data-aos][data-aos-delay="12200"] {
-  transition-delay: 11600ms;
+  transition-delay: 10800ms;
 }
 
 body[data-aos-delay="12400"] [data-aos],
 [data-aos][data-aos][data-aos-delay="12400"] {
-  transition-delay: 11800ms;
+  transition-delay: 11000ms;
 }
 
 body[data-aos-delay="12600"] [data-aos],
 [data-aos][data-aos][data-aos-delay="12600"] {
-  transition-delay: 12000ms;
+  transition-delay: 11200ms;
 }
