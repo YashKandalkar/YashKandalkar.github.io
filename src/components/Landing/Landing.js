@@ -61,11 +61,11 @@ const Landing = forwardRef(({ fixNavbar, inView }, ref) => {
         className="pt-36 px-2"
       >
         <div
-          data-aos="fade-up"
-          className="flex flex-col text-center items-center mb-4 sm:mb-0"
+          // data-aos="fade-up"
+          className="flex landingItems flex-col text-center items-center mb-4 sm:mb-0"
         >
           <h1
-            data-aos="fade-up"
+            // data-aos="fade-up"
             data-aos-delay="11800"
             style={{
               fontFamily: "Calibre",
@@ -78,7 +78,7 @@ const Landing = forwardRef(({ fixNavbar, inView }, ref) => {
             Yash Kandalkar
           </h1>
           <p
-            data-aos="fade-up"
+            // data-aos="fade-up"
             data-aos-delay="12000"
             ref={roleRef}
             className="mb-3 text-center text-3xl sm:text-4xl md:text-2xl text-gray-600 changing-line"
@@ -90,7 +90,7 @@ const Landing = forwardRef(({ fixNavbar, inView }, ref) => {
             {"Web Developer ~ Open Source"}
           </p>
           <p
-            data-aos="fade-up"
+            // data-aos="fade-up"
             data-aos-delay="12200"
             ref={roleRef}
             className="mb-3 mt-2 text-center max-w-sm text-xl text-gray-600 changing-line"
@@ -103,9 +103,9 @@ const Landing = forwardRef(({ fixNavbar, inView }, ref) => {
             <br /> Competitive programming
           </p>
           <div
-            data-aos="fade-up"
+            // data-aos="fade-up"
             data-aos-delay="12400"
-            className="flex items-center flex-row mt-7    "
+            className="flex items-center flex-row mt-7"
           >
             <a
               className="mr-3 text-gray-50"
@@ -141,12 +141,16 @@ const Landing = forwardRef(({ fixNavbar, inView }, ref) => {
             </a>
           </div>
           <Link
-            className=" cursor-pointer"
+            className="cursor-pointer"
             to="footer-container"
             smooth={true}
             duration={700}
           >
-            <div data-aos="fade-up" data-aos-delay="12600">
+            <div
+              id={"aboutMeButton"}
+              data-aos="fade-up"
+              data-aos-delay="12600"
+            >
               <div
                 style={{
                   fontFamily: "'Inter'",

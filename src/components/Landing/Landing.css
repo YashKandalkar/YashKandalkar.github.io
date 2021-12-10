@@ -89,3 +89,67 @@ body[data-aos-delay="12600"] [data-aos],
 [data-aos][data-aos][data-aos-delay="12600"] {
   transition-delay: 11200ms;
 }
+
+.landingItems > :nth-child(1) {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.landingItems > :nth-child(1) {
+  animation: fadeDown 0.3s ease-in-out forwards;
+  animation-delay: 11.7s;
+  animation-direction: forwards;
+}
+
+.landingItems > :nth-child(2) {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.landingItems > :nth-child(2) {
+  animation: fadeDown 0.3s ease-in-out forwards;
+  animation-delay: 11.9s;
+  animation-direction: forwards;
+}
+
+.landingItems > :nth-child(3) {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.landingItems > :nth-child(3) {
+  animation: fadeDown 0.3s ease-in-out forwards;
+  animation-delay: 12.1s;
+  animation-direction: forwards;
+}
+
+.landingItems > :nth-child(4) {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.landingItems > :nth-child(4) {
+  animation: fadeDown 0.3s ease-in-out forwards;
+  animation-delay: 12.3s;
+  animation-direction: forwards;
+}
+
+#aboutMeButton {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeDown 0.3s ease-in-out forwards;
+  animation-delay: 12.5s;
+  animation-direction: forwards;
+}
+
+/* fade down animation */
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
