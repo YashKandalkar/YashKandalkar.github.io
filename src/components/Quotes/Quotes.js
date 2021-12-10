@@ -35,7 +35,7 @@ const Quotes = () => {
         className="flex-grow px-4 h-full text-center text-gray-300 bg-primaryDarkBlue w-full flex-col justify-end items-center flex"
       >
         <p>{quotes[idx].quote}</p>
-        <p className="mb-4 text-gray-600">- {quotes[idx].author}</p>
+        <p className="mb-4 text-gray-500">- {quotes[idx].author}</p>
       </div>
       <div className="flex-grow px-4 bg-primaryDarkBlue w-full h-full">
         <div
@@ -58,7 +58,7 @@ const Quotes = () => {
           >
             {quotes[idx].japanese}
           </p>
-          <p className="text-gray-600">- {quotes[idx].japaneseAuther}</p>
+          <p className="text-gray-500">- {quotes[idx].japaneseAuther}</p>
         </div>
       </div>
     </div>
