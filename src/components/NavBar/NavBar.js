@@ -42,6 +42,9 @@ const NavBar = ({ inView, fixNavbar }) => {
             className="flex navList flex-col w-full items-center md:flex-row list-none md:ml-auto md:justify-end"
           >
             <li
+              style={{
+                animationDelay: window.innerWidth <= 768 ? "100ms" : "11.1s",
+              }}
               className={`nav-item ${
                 inView === "landing" && "navbar-item-in-view"
               }`}
@@ -56,6 +59,9 @@ const NavBar = ({ inView, fixNavbar }) => {
               </Link>
             </li>
             <li
+              style={{
+                animationDelay: window.innerWidth <= 768 ? "300ms" : "11.3s",
+              }}
               className={`nav-item 
                 ${inView === "projects" && "navbar-item-in-view"}`}
             >
@@ -69,6 +75,9 @@ const NavBar = ({ inView, fixNavbar }) => {
               </Link>
             </li>
             <li
+              style={{
+                animationDelay: window.innerWidth <= 768 ? "500ms" : "11.5s",
+              }}
               className={`nav-item 
                 ${inView === "volunteering" && "navbar-item-in-view"}`}
             >
@@ -82,6 +91,9 @@ const NavBar = ({ inView, fixNavbar }) => {
               </Link>
             </li>
             <li
+              style={{
+                animationDelay: window.innerWidth <= 768 ? "700ms" : "11.7s",
+              }}
               className={`nav-item 
                 ${inView === "aboutMe" && "navbar-item-in-view"}`}
             >
