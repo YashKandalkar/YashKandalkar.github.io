@@ -1,15 +1,18 @@
 #footer-container {
-  background-color: #e5e7eb;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%239dc1d2' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%2356c5ce' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%236eb5de' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%2300aecf' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%2337a6ec' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%230094d2' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%230095f8' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%230079d1' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%230080ff' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23005ac7' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%232f66ff' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%230b35af' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+  background-color: theme("colors.primaryDarkBlue");
+  /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%239dc1d2' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%2356c5ce' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%236eb5de' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%2300aecf' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%2337a6ec' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%230094d2' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%230095f8' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%230079d1' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%230080ff' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23005ac7' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%232f66ff' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%230b35af' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
   background-attachment: local;
   background-size: cover;
-  background-position: center;
+  background-position: center; */
+  min-height: 100vh;
 }
 
-.imgimg {
-  shape-outside: circle(50%);
-  width: 300px;
-  height: 300px;
-  float: right;
-  clip-path: circle(50%);
+.profileImg:hover {
+  filter: none !important;
+}
+
+.profileImg:hover + .profileBorderDiv {
+  top: 1.2rem !important;
+  left: 1.2rem !important;
+  z-index: 0 !important;
 }

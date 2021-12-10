@@ -2,53 +2,92 @@ import { forwardRef } from "react";
 import "./Volunteering.css";
 import gdscdmce from "../../assets/gdscdmce.jpeg";
 import codechefdmce from "../../assets/codechefdmce.jpeg";
+import supabase from "../../assets/supabase.jpg";
+import skift from "../../assets/skift.png";
+import oppia from "../../assets/oppia.png";
+import { OpenSourceItem } from "..";
+
+const Accent = ({ children }) => (
+  <span className="text-accent">{children}</span>
+);
+
+const openSourceItems = [
+  {
+    logo: supabase,
+    name: "Supabase",
+    desc: "Open-Source serverless backend",
+    repoLink: "https://github.com/supabase/supabase",
+    prDesc: (
+      <>
+        Developed a <Accent>full-stack</Accent> To-Do app example using
+        Supabase as an example <Accent>create-react-app</Accent> project.
+      </>
+    ),
+    prsLink:
+      "https://github.com/pulls?user=supabase&q=is%3Apr+author%3AYashKandalkar+archived%3Afalse+is%3Aclosed&user=supabase",
+    tags: ["React", "Serverless", "Supabase"],
+  },
+  {
+    logo: skift,
+    name: "SkiftOS",
+    desc: "An OS built in modern C++",
+    repoLink: "https://github.com/skiftOS/skift",
+    prDesc: (
+      <>
+        Implemented <Accent>coreutils</Accent> (terminal commands) for the
+        command line interface like <Accent>rmdir</Accent> and{" "}
+        <Accent>mkdir</Accent>.
+      </>
+    ),
+    prsLink:
+      "https://github.com/pulls?q=is%3Apr+author%3AYashKandalkar+archived%3Afalse+is%3Aclosed+user%3Askiftos",
+    tags: ["C++", "coreutils", "OS"],
+  },
+  {
+    logo: oppia,
+    name: "Oppia",
+    desc: "A free, online learning platform",
+    repoLink: "https://github.com/oppia/oppia",
+    prDesc: (
+      <>
+        Enabled strict <Accent>TypeScript</Accent> check for some files,
+        creating necessary <Accent>types</Accent> / <Accent>interfaces</Accent>
+        . Refactored old code.
+      </>
+    ),
+    prsLink:
+      "https://github.com/pulls?q=is%3Apr+author%3AYashKandalkar+archived%3Afalse+is%3Aclosed+user%3Aoppia+",
+    tags: ["TypeScript", "Angular", ""],
+  },
+];
 
 const Volunteering = forwardRef((_, ref) => {
   return (
-    <div
+    <section
       ref={ref}
       id="skills-container"
-      className="text-center mt-8 pt-48 pb-48 relative"
+      className="mt-8 px-2 sm:px-10 md:px-16 lg:px-40  pt-8 relative"
     >
-      <h1
-        style={{
-          fontFamily: "'Valorant'",
-          left: "50%",
-          top: "10%",
-          transform: "translate(-50%,-50%)",
-          zIndex: 2,
-        }}
-        className="text-3xl sm:text-4xl text-gray-900 text-center absolute"
-      >
-        VOLUNTEERING
-      </h1>
-      <h1
-        style={{
-          fontFamily: "'Valorant'",
-          left: "50%",
-          top: "10.5%",
-          transform: "translate(-50%,-50%)",
-          zIndex: 1,
-          letterSpacing: 8,
-        }}
-        className="text-4xl sm:text-6xl text-gray-300 space-x-9 text-center absolute"
-      >
-        VOLUNTEERING
-      </h1>
-      {/* left vertical text */}
-      <h1
-        style={{
-          fontFamily: "'Valorant'",
-          left: "5%",
-          top: "50%",
-          transform: "translate(-50%,-50%) rotate(180deg)",
-          writingMode: "vertical-rl",
-        }}
-        className="text-4xl md:block hidden text-gray-900 text-center absolute"
-      >
-        VOLUNTEERING
-      </h1>
-      <div className="flex flex-col justify-center mx-2">
+      <div className="mt-12 mb-16 w-full relative flex flex-row items-center">
+        <h1
+          style={{
+            fontFamily: "Calibre",
+          }}
+          className="text-4xl text-gray-50 text-right"
+        >
+          <span className="text-accent text-2xl font-mono">02.</span>
+          &nbsp;VOLUNTEERING&nbsp;&nbsp;
+        </h1>
+        <div
+          style={{
+            width: "100%",
+            height: 1,
+          }}
+          className="mb-3 bg-lightestNavy"
+        />
+      </div>
+
+      <div className="flex flex-row gap-4 flex-wrap justify-center mx-2">
         <VolunteeringItem
           idx={1}
           imgSrc={gdscdmce}
@@ -56,77 +95,97 @@ const Volunteering = forwardRef((_, ref) => {
           company={"Google Developer Student Club DMCE"}
           date={"Aug 2021 - Current"}
           listItems={[
-            "Work on Web Development projects while collaborating with other domains",
-            "Conduct sessions, workshops, activities related to Web Development",
+            "Conduct sessions, workshops, activities and work on projects related to Web Development. Collaborate with other domains.",
           ]}
         />
         <VolunteeringItem
           idx={2}
           imgSrc={codechefdmce}
-          role={"Competitive Programming Lead"}
+          role={`Comp. Programming Lead`}
           company={"CodeChef DMCE"}
           date={"July 2021 - Current"}
           listItems={[
-            "Plan long term goals for the committee.",
-            "Conduct various technical or non-technical events to uplift the coding culture in college.",
-            "Conduct informal problem solving sessions.",
-          ]}
-        />
-        <VolunteeringItem
-          idx={3}
-          imgSrc={codechefdmce}
-          role={"Executive Team Member"}
-          company={"CodeChef DMCE"}
-          date={"July 2021 - Current"}
-          listItems={[
-            "Plan long term goals for the committee.",
-            "Conduct various technical or non-technical events to uplift the coding culture in college.",
-            "Conduct informal problem solving sessions.",
+            "Plan long term goals for the committee, conduct various technical to uplift the coding culture in college.",
           ]}
         />
       </div>
-      <svg
-        viewBox="0 0 500 20"
-        xmlns="http://www.w3.org/2000/svg"
-        className="absolute"
-        style={{ bottom: -3, left: -12 }}
+
+      <div className="mt-20 mb-16 w-full relative flex flex-row items-center">
+        <div
+          style={{
+            width: "100%",
+            height: 1,
+            // backgroundColor: "#6c82b9",
+          }}
+          className="mb-3 bg-lightestNavy"
+        />
+        <h1
+          style={{
+            fontFamily: "Calibre",
+          }}
+          className="text-4xl text-gray-50 whitespace-nowrap text-right"
+        >
+          &nbsp;&nbsp;
+          <span className="text-accent text-2xl font-mono">03.&nbsp;</span>OPEN
+          SOURCE&nbsp;
+        </h1>
+      </div>
+
+      <div className="flex flex-row gap-4 flex-wrap justify-center items-center mx-2">
+        {openSourceItems.map((el, ind) => (
+          <OpenSourceItem key={ind} idx={ind} {...el} />
+        ))}
+      </div>
+      <div
+        style={{ fontFamily: "Inter" }}
+        className="px-4 relative mt-4 mdlg:mt-12 flex justify-center text-gray-900"
       >
-        <defs></defs>
-        <path
-          d="M 252.689 0.398 L 507.169 19.215 L -1.791 19.215 L 252.689 0.398 Z"
-          style={{ fill: "#e5e7eb" }}
-          shapeRendering="triangle -1.791 0.398 508.96 18.817 0.5 0 1@dfa731ec"
-        ></path>
-      </svg>
-    </div>
+        <a
+          style={{ color: "#41b7bf", borderWidth: 1, borderColor: "#41b7bf" }}
+          rel="noreferrer"
+          target="_blank"
+          href="https://github.com/YashKandalkar"
+          className={`cursor-pointer accentButton transition-all duration-200
+          block bg-transparent border-2 px-4 shadow-sm
+          mb-6 py-2 rounded-md whitespace-nowrap`}
+        >
+          {"More on GitHub ->"}
+        </a>
+      </div>
+    </section>
   );
 });
 
 const VolunteeringItem = ({ idx, role, company, date, listItems, imgSrc }) => (
-  <div
-    data-aos={idx % 2 ? "fade-down-right" : "fade-down-left"}
-    className="flex mb-4 sm:flex-row flex-col justify-center bg-gray-200 mx-4 sm:mx-auto px-3 py-2 rounded-md shadow-md"
-  >
-    <div className="flex justify-center items-center mr-2">
-      <img
-        src={imgSrc}
-        alt="logo"
-        className="rounded-md  sm:w-40 w-24 border-2 border-gray-50"
-      />
-    </div>
-    <div className="max-w-md text-left p-2">
-      <span className="flex flex-row justify-between">
-        <h3 className="text-gray-900 text-base md:text-lg font-bold">
-          {role}
-        </h3>
-        <h3 className="text-gray-500 sm:block hidden">{date}</h3>
-      </span>
-      <h3 className="text-gray-500 text-sm">{company}</h3>
-      <ul className="list-disc ml-4 text-sm sm:text-base mt-2 text-gray-900">
-        {listItems.map((el, ind) => (
-          <li key={ind}>{el}</li>
-        ))}
-      </ul>
+  <div data-aos={"fade-up"} data-aos-delay={idx * 200}>
+    <div
+      style={{ fontFamily: "Inter", backgroundColor: "#112240" }}
+      className={`mb-4 transition-all transform hover:-translate-y-2
+     rounded-sm relative shadow-lg`}
+    >
+      <div
+        className={`md:w-72 md:h-72 text-left rounded-sm`}
+        style={{
+          background: `url(${imgSrc}) no-repeat center center`,
+          backgroundSize: "cover",
+        }}
+      >
+        <div
+          style={{ backgroundColor: "rgba(10, 25, 47, 0.85)" }}
+          className="w-full xs:w-72 h-full p-4 flex  flex-col"
+        >
+          <h3 className="text-gray-400 text-right mb-6">{date}</h3>
+          <h3 className="text-gray-50 text-lg text-center md:text-xl font-bold">
+            {role}
+          </h3>
+          <h3 className="text-gray-400 mb-4 text-center text-sm">{company}</h3>
+          <ul className="text-base mb-8  mt-2 list-none text-gray-200">
+            {listItems.map((el, ind) => (
+              <li key={ind}>{el}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 );

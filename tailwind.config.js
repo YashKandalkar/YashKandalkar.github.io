@@ -11,7 +11,18 @@ module.exports = {
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primaryDarkBlue: "#0a192f",
+        accent: "#41b7bf",
+        navyBlue: "#112240",
+        lightestNavy: "#233554",
+      },
+      screens: {
+        xs: "364px",
+        mdlg: "880px",
+      },
+    },
   },
   variants: {
     extend: {},

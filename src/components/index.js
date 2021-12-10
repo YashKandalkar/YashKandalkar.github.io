@@ -5,3 +5,4 @@ import Projects from "./Projects/Projects";
 import Volunteering from "./Volunteering/Volunteering";
 
 export { Quotes, Footer, Landing, Projects, Volunteering };
+export { default as OpenSourceItem } from "./OpenSourceItem/OpenSourceItem";

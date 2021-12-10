@@ -17,7 +17,8 @@ const projectsData = [
   },
   {
     name: "Track Your Day",
-    description: "A Progressive Web App to track your daily activities!",
+    description: `A Progressive Web App to track your daily activities! Add your daily tasks and mark then as completed.
+      Get a weekly analysis of the tasks you completed or abandoned.`,
     languages: ["React", "NodeJS", "ExpressJS", "PostgresSQL"],
     date: "July 2020",
     img: trackYourDay,
@@ -27,7 +28,8 @@ const projectsData = [
   },
   {
     name: "Dev Search",
-    description: "A Miniature Search Engine, for developers!",
+    description: `A Miniature Search Engine, for developers! Crawler ran on StackOverflow and GeeksForGeeks.
+    Over 90K links indexed in the database. UI is built using ReactJS and Ant Design components.`,
     languages: ["React", "Flask", "MongoDB"],
     date: "Feb 2021",
     img: searchEngine,
@@ -39,46 +41,29 @@ const projectsData = [
 
 const Projects = forwardRef((_, ref) => {
   return (
-    <section ref={ref} id="projects-container" className="relative pt-40">
-      {/* vertical */}
-      <h1
-        style={{
-          fontFamily: "'Valorant'",
-          left: "5%",
-          top: "50%",
-          transform: "translate(-50%,-50%) rotate(180deg)",
-          writingMode: "vertical-rl",
-        }}
-        className="text-4xl text-gray-900 text-center absolute hidden md:block"
-      >
-        PROJECTS
-      </h1>
-      <div className="text-center mt-12 relative">
+    <section
+      ref={ref}
+      id="projects-container"
+      className="relative pt-8 mx-2 bg-primaryDarkBlue sm:mx-10 md:mx-16 lg:mx-40"
+    >
+      <div className="text-center mt-12 bg-primaryDarkBlue relative flex flex-row items-center">
         <h1
           style={{
-            fontFamily: "'Valorant'",
-            left: "50%",
-            top: "-6rem",
-            transform: "translate(-50%,-50%)",
-            zIndex: 2,
+            fontFamily: "Calibre",
           }}
-          className="text-4xl text-gray-900 text-center absolute"
+          className="text-4xl text-gray-50 text-left"
         >
-          PROJECTS
+          <span className="text-accent text-2xl font-mono">01.</span>
+          &nbsp;PROJECTS&nbsp;
         </h1>
-        <h1
+        <div
           style={{
-            fontFamily: "'Valorant'",
-            left: "50%",
-            top: "-5.9rem",
-            transform: "translate(-50%,-50%)",
-            zIndex: 1,
-            letterSpacing: 8,
+            width: "40vmax",
+            height: 1,
+            // backgroundColor: "#6c82b9",
           }}
-          className="text-6xl text-gray-300 space-x-9 text-center absolute"
-        >
-          PROJECTS
-        </h1>
+          className="mb-3 bg-lightestNavy"
+        />
       </div>
       <div className="px-2">
         {projectsData.map((project, index) => (
@@ -87,21 +72,68 @@ const Projects = forwardRef((_, ref) => {
       </div>
 
       <div
-        id="view-all"
-        style={{ fontFamily: "'Inter'" }}
-        className="px-4 relative mt-12 flex  justify-center text-gray-900"
+        style={{ fontFamily: "Inter" }}
+        className="px-4 relative mt-4 mdlg:mt-12 flex justify-center text-gray-900"
       >
-        <div />
         <a
+          style={{ color: "#41b7bf", borderWidth: 1, borderColor: "#41b7bf" }}
           rel="noreferrer"
           target="_blank"
           href="https://github.com/YashKandalkar"
-          className="cursor-pointer block bg-gray-300 px-4 py-2 whitespace-nowrap"
+          className="cursor-pointer shadow-sm accentButton transition-all duration-200 block bg-transparent border-2 px-4 mb-6 py-2 rounded-md whitespace-nowrap"
         >
           {"View my GitHub ->"}
         </a>
-        <div />
       </div>
+
+      <svg
+        id="svgfilters"
+        aria-hidden="true"
+        style={{
+          position: "absolute",
+          width: 0,
+          height: 0,
+          overflow: "hidden",
+        }}
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        xlinkHref="http://www.w3.org/1999/xlink"
+      >
+        <defs>
+          <filter
+            id="sea"
+            x="-10%"
+            y="-10%"
+            width="120%"
+            height="120%"
+            filterUnits="objectBoundingBox"
+            primitiveUnits="userSpaceOnUse"
+            colorInterpolationFilters="sRGB"
+          >
+            <feColorMatrix
+              type="matrix"
+              values=".33 .33 .33 0 0
+          .33 .33 .33 0 0
+          .33 .33 .33 0 0
+          0 0 0 1 0"
+              in="SourceGraphic"
+              result="colormatrix"
+            />
+            <feComponentTransfer in="colormatrix" result="componentTransfer">
+              <feFuncR type="table" tableValues="0.02 0.13 0.8" />
+              <feFuncG type="table" tableValues="0.02 0.47 0.97" />
+              <feFuncB type="table" tableValues="0.26 0.52 0.48" />
+              <feFuncA type="table" tableValues="0 1" />
+            </feComponentTransfer>
+            <feBlend
+              mode="normal"
+              in="componentTransfer"
+              in2="SourceGraphic"
+              result="blend"
+            />
+          </filter>
+        </defs>
+      </svg>
     </section>
   );
 });

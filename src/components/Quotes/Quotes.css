@@ -3,7 +3,7 @@
 }
 
 #quote-top p {
-  animation: top-p-animation 1s ease-in-out 1s forwards;
+  animation: top-p-animation 1s ease-in-out 2s forwards;
   transform: translateY(-20px);
   opacity: 0;
 }
@@ -11,25 +11,25 @@
 #quote-bottom p {
   transform: translateY(20px);
   opacity: 0;
-  animation: bottom-p-animation 1s ease-in-out 1s forwards;
+  animation: bottom-p-animation 1s ease-in-out 2s forwards;
 }
 
 #quote-line span:nth-child(1) {
-  background-color: theme("colors.gray.900");
+  background-color: theme("colors.accent");
   width: 3px;
   height: 3px;
   margin-right: 1px;
 }
 
 #quote-line span:nth-child(2) {
-  background-color: theme("colors.gray.900");
+  background-color: theme("colors.accent");
   width: 30vw;
   height: 1px;
   animation: increase-line-width 600ms ease-in-out 9s forwards;
 }
 
 #quote-line span:nth-child(3) {
-  background-color: theme("colors.gray.900");
+  background-color: theme("colors.accent");
   width: 3px;
   height: 3px;
   margin-left: 1px;

@@ -1,132 +1,143 @@
-import { useState, forwardRef, useEffect, useRef } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faGithub,
-  faInstagram,
-  faTwitter,
-} from "@fortawesome/free-brands-svg-icons";
+import { forwardRef, useRef } from "react";
+import { Github, Instagram, Twitter, Linkedin } from "@geist-ui/react-icons";
+
 import { Link } from "react-scroll";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import NavBar from "../NavBar/NavBar";
-import arrowsDown from "../../assets/arrows-down.svg";
 import "./Landing.css";
 
-const roles = [
-  "Web Developer",
-  "Open Source Contributor",
-  "Competitive Programmer",
-];
+// const roles = [
+//   "Web Developer",
+//   "Open Source Contributor",
+//   "Competitive Programmer",
+// ];
 
 const Landing = forwardRef(({ fixNavbar, inView }, ref) => {
   const roleRef = useRef();
-  const [currentRoleLine, setCurrentRoleLine] = useState(0);
+  // const [currentRoleLine, setCurrentRoleLine] = useState(0);
 
-  useEffect(() => {
-    let startTimer, iterationTimer;
-    roleRef.current.onanimationstart = () => {
-      startTimer = setTimeout(
-        () =>
-          setCurrentRoleLine((state) => {
-            return state + 1;
-          }),
-        4500
-      );
-    };
-    roleRef.current.onanimationiteration = () => {
-      iterationTimer = setTimeout(
-        () =>
-          setCurrentRoleLine((state) => {
-            return state + 1;
-          }),
-        4500
-      );
-    };
+  // useEffect(() => {
+  //   let startTimer, iterationTimer;
+  //   roleRef.current.onanimationstart = () => {
+  //     startTimer = setTimeout(
+  //       () =>
+  //         setCurrentRoleLine((state) => {
+  //           return state + 1;
+  //         }),
+  //       4500
+  //     );
+  //   };
+  //   roleRef.current.onanimationiteration = () => {
+  //     iterationTimer = setTimeout(
+  //       () =>
+  //         setCurrentRoleLine((state) => {
+  //           return state + 1;
+  //         }),
+  //       4500
+  //     );
+  //   };
 
-    return () => {
-      clearTimeout(startTimer);
-      clearTimeout(iterationTimer);
-    };
-  }, []);
+  //   return () => {
+  //     clearTimeout(startTimer);
+  //     clearTimeout(iterationTimer);
+  //   };
+  // }, []);
 
   return (
     <div
       id="landing-container"
       ref={ref}
-      style={{
-        paddingTop: fixNavbar ? "5.5rem" : "2rem",
-      }}
+      style={
+        {
+          // paddingTop: "5.5rem"
+        }
+      }
       className={"relative "}
     >
       <NavBar fixNavbar={fixNavbar} inView={inView} />
 
-      <section ref={ref} style={{ marginTop: fixNavbar ? "10rem" : 0 }}>
+      <section
+        ref={ref}
+        style={{ marginTop: fixNavbar ? "0" : 0 }}
+        className="pt-36 px-2"
+      >
         <div
           data-aos="fade-up"
-          className="flex flex-col mt-20 text-center items-center mb-4 sm:mb-0"
+          className="flex flex-col text-center items-center mb-4 sm:mb-0"
         >
           <h1
+            data-aos="fade-up"
+            data-aos-delay="11800"
             style={{
-              fontFamily: "'Valorant'",
+              fontFamily: "Calibre",
+              letterSpacing: 1,
+              color: "#ccd6f6",
+              fontWeight: 600,
             }}
-            className="mb-3 text-gray-900 font-bold leading-none text-4xl  pr-4 sm:text-6xl lg:text-8xl"
+            className="mb-6 sm:mb-3 mt-12 sm:mt-0 text-gray-900 leading-none text-5xl sm:text-6xl md:text-8xl"
           >
             Yash Kandalkar
           </h1>
           <p
+            data-aos="fade-up"
+            data-aos-delay="12000"
             ref={roleRef}
-            className="mb-3 text-center text-2xl sm:text-4xl text-gray-600 changing-line"
-            style={{ fontFamily: "'Valorant'" }}
+            className="mb-3 text-center text-3xl sm:text-4xl md:text-2xl text-gray-600 changing-line"
+            style={{
+              color: "#6c82b9",
+              fontFamily: "Calibre",
+            }}
           >
-            {roles[currentRoleLine % roles.length]}
+            {"Web Developer ~ Open Source"}
           </p>
-          <div className="flex items-center flex-row mt-8">
+          <p
+            data-aos="fade-up"
+            data-aos-delay="12200"
+            ref={roleRef}
+            className="mb-3 text-center max-w-sm text-xl text-gray-600 changing-line"
+            style={{
+              fontFamily: "Calibre",
+            }}
+          >
+            I am a student developer, interested in
+            <br /> Web Development, Open Source and
+            <br /> Competitive programming
+          </p>
+          <div
+            data-aos="fade-up"
+            data-aos-delay="12400"
+            className="flex items-center flex-row mt-8"
+          >
             <a
-              className="mr-2"
+              className="mr-3 text-gray-50"
               rel="noreferrer"
               target="_blank"
               href={"https://github.com/YashKandalkar"}
             >
-              <FontAwesomeIcon
-                className="text-gray-900"
-                icon={faGithub}
-                size="2x"
-              />
+              <Github color={"#6c82b9"} />
             </a>
             <a
-              className="mr-2"
+              className="mr-3 text-gray-50"
               rel="noreferrer"
               target="_blank"
               href={"https://twitter.com/Yash__Kandalkar"}
             >
-              <FontAwesomeIcon
-                className="text-gray-900"
-                icon={faTwitter}
-                size="2x"
-              />
+              <Twitter color={"#6c82b9"} />
             </a>
             <a
-              className="mr-2"
+              className="mr-3 text-gray-50"
               rel="noreferrer"
               target="_blank"
               href={"https://www.instagram.com/yash__kandalkar/"}
             >
-              <FontAwesomeIcon
-                className="text-gray-900"
-                icon={faInstagram}
-                size="2x"
-              />
+              <Instagram color={"#6c82b9"} />
             </a>
             <a
-              className=""
+              className=" text-gray-50"
               rel="noreferrer"
               target="_blank"
-              href={"mailto:yashsk.yk@gmail.com"}
+              href={"https://www.linkedin.com/in/yash-kandalkar-b5890b1aa/"}
             >
-              <FontAwesomeIcon
-                className="text-gray-900"
-                icon={faEnvelope}
-                size="2x"
-              />
+              <Linkedin color={"#6c82b9"} />
             </a>
           </div>
           <Link
@@ -135,39 +146,112 @@ const Landing = forwardRef(({ fixNavbar, inView }, ref) => {
             smooth={true}
             duration={700}
           >
-            <div
-              id="about-me-button"
-              style={{ fontFamily: "'Inter'" }}
-              className="px-4 relative py-2 mb-10 mt-12 bg-gray-900 text-gray-300  transition-all duration-300 ease-in-out"
-            >
-              About Me
+            <div data-aos="fade-up" data-aos-delay="12600">
+              <div
+                style={{
+                  fontFamily: "'Inter'",
+                  color: "#41b7bf",
+                  borderWidth: 1,
+                  borderColor: "#41b7bf",
+                }}
+                className="px-4 relative accentButton py-2 rounded-sm mb-10 mt-12 bg-transparent border-2 text-gray-900  transition-all duration-300 ease-in-out"
+              >
+                About Me
+              </div>
             </div>
           </Link>
-          <div className="flex flex-col my-2 items-center">
+          {/* <div className="flex flex-col my-2 items-center">
             <img src={arrowsDown} alt="arrows-down" style={{ width: 60 }} />
-          </div>
+          </div> */}
         </div>
       </section>
 
-      <svg
-        viewBox="0 0 500 20"
+      <div className="fixed bottom-0 left-6 z-40 hidden md:flex flex-col items-center">
+        <div className="flex flex-col">
+          <a
+            className=""
+            rel="noreferrer"
+            target="_blank"
+            href={"https://github.com/YashKandalkar"}
+          >
+            <Github color={"#6c82b9"} className="mb-6" strokeWidth={2} />
+          </a>
+          <a
+            className=""
+            rel="noreferrer"
+            target="_blank"
+            href={"https://twitter.com/Yash__Kandalkar"}
+          >
+            <Twitter color={"#6c82b9"} className="mb-6" strokeWidth={2} />
+          </a>
+          <a
+            className=""
+            rel="noreferrer"
+            target="_blank"
+            href={"https://www.instagram.com/yash__kandalkar/"}
+          >
+            <Instagram color={"#6c82b9"} className="mb-6" strokeWidth={2} />
+          </a>
+          <a
+            className=""
+            rel="noreferrer"
+            target="_blank"
+            href={"https://www.linkedin.com/in/yash-kandalkar-b5890b1aa/"}
+          >
+            <Linkedin color={"#6c82b9"} className="mb-6" strokeWidth={2} />
+          </a>
+        </div>
+        <div
+          style={{ height: "30vh", width: 2, backgroundColor: "#6c82b9" }}
+        />
+      </div>
+
+      <div className="fixed bottom-0 right-6 z-40 hidden md:flex flex-col items-center">
+        <div
+          className="flex flex-col mb-6"
+          style={{
+            writingMode: "vertical-rl",
+            letterSpacing: 2,
+            color: "#6c82b9",
+          }}
+        >
+          <a href={"mailto:yashsk.yk@gmail.com"}>yashsk.yk@gmail.com</a>
+        </div>
+        <div
+          style={{ height: "20vh", width: 2, backgroundColor: "#6c82b9" }}
+        />
+      </div>
+
+      {/* <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="mt-16 sm:mt-10 lg:mt-0"
+        width="100%"
+        viewBox="5 0 590 30"
+        height="30"
+        version="1.0"
+        style={{ bottom: -1, position: "absolute" }}
+        preserveAspectRatio="none"
       >
-        <defs></defs>
-        <path
-          d="M 72.079 287.105 L 83.681 579.81 L 60.477 579.81 L 72.079 287.105 Z"
-          shapeRendering="triangle 60.477 287.105 23.204 292.705 0.5 0 1@b71a4cbc"
-          style={{ fill: "#e5e7eb" }}
-          transform="matrix(-0.065796, 0.997833, -0.999849, -0.035227, 584.230286, -40.04438)"
-        ></path>
-        <path
-          d="M 71.969 261.633 L 83.553 528.371 L 60.385 528.371 L 71.969 261.633 Z"
-          shapeRendering="triangle 60.385 261.633 23.168 266.738 0.5 0 1@1fbeb5ec"
-          style={{ fill: "#e5e7eb" }}
-          transform="matrix(0.065796, 0.997833, 0.999849, -0.035227, -27.173695, -42.730399)"
-        ></path>
-      </svg>
+        <defs>
+          <clipPath id="a">
+            <path d="M 0 0 L 300 0 L 301 29.03125 L 0 29.03125 Z M 9.675781 0" />
+          </clipPath>
+          <clipPath id="b">
+            <path d="M 299 1 L 600 1 L 600 29.03125 L 299 29.03125 Z M 299 1" />
+          </clipPath>
+        </defs>
+        <g clipPath="url(#a)">
+          <path
+            fill="#E5E7EB"
+            d="M 1.226562 -0.0234375 L 300.445312 27.46875 L 296.859375 66.496094 L -2.359375 39.003906 Z M 1.226562 -0.0234375"
+          />
+        </g>
+        <g clipPath="url(#b)">
+          <path
+            fill="#E5E7EB"
+            d="M 299.277344 27.476562 L 598.625 1.417969 L 602.023438 40.464844 L 302.675781 66.519531 Z M 299.277344 27.476562"
+          />
+        </g>
+      </svg> */}
     </div>
   );
 });

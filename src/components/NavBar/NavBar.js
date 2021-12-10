@@ -10,12 +10,16 @@ const NavBar = ({ inView, fixNavbar }) => {
   return (
     <nav
       id="navbar"
-      className={`flex flex-wrap
+      className={`flex flex-wrap fixed
     items-center justify-between 
     lg:px-6 px-6 sm:px-10
-    py-3 ml-0 bg-gray-900 
-    transition-all nav-left-triangle
-    ${fixNavbar ? " fixed top-0 z-50 w-full" : " relative xl:mx-36"}`}
+    py-3 ml-0 w-full z-30 ${fixNavbar && "shadow-lg"} 
+   `}
+      style={{
+        backgroundColor: fixNavbar
+          ? "rgb(10, 25, 47, 0.9)"
+          : "rgb(10, 25, 47)",
+      }}
     >
       <div className="container mx-auto flex flex-wrap items-center justify-between">
         <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
@@ -38,58 +42,65 @@ const NavBar = ({ inView, fixNavbar }) => {
             navbarOpen ? "flex" : "hidden"
           }`}
         >
-          <ul className="flex flex-col w-full items-center lg:flex-row list-none lg:ml-auto lg:justify-end">
+          <ul
+            style={{ fontFamily: "Inter" }}
+            className="flex navList flex-col w-full items-center lg:flex-row list-none lg:ml-auto lg:justify-end"
+          >
             <li
+              data-aos-delay="8000"
               className={`nav-item ${
                 inView === "landing" && "navbar-item-in-view"
               }`}
             >
               <Link
                 to="landing-container"
-                className="px-3 py-2 flex items-center text-xs uppercase  leading-snug text-gray-300 hover:opacity-75"
+                className="px-2 py-2 flex items-center text-xs   leading-snug text-gray-300 hover:opacity-75"
                 smooth={true}
                 duration={300}
               >
-                <span className="mx-2 text-lg">HOME</span>
+                <span className="mx-2 text-sm">Home</span>
               </Link>
             </li>
             <li
+              data-aos-delay="200"
               className={`nav-item 
                 ${inView === "projects" && "navbar-item-in-view"}`}
             >
               <Link
-                className="px-3 py-2 flex items-center text-xs uppercase  leading-snug text-gray-300 hover:opacity-75"
+                className="px-2 py-2 flex items-center text-xs   leading-snug text-gray-300 hover:opacity-75"
                 to="projects-container"
                 smooth={true}
                 duration={500}
               >
-                <span className="mx-2 text-lg">PROJECTS</span>
+                <span className="mx-2 text-sm">Projects</span>
               </Link>
             </li>
             <li
+              data-aos-delay="400"
               className={`nav-item 
                 ${inView === "volunteering" && "navbar-item-in-view"}`}
             >
               <Link
-                className="px-3 py-2 flex items-center text-xs uppercase  leading-snug text-gray-300 hover:opacity-75"
+                className="px-2 py-2 flex items-center text-xs   leading-snug text-gray-300 hover:opacity-75"
                 to="skills-container"
                 smooth={true}
                 duration={600}
               >
-                <span className="mx-2 text-lg">VOLUNTEERING</span>
+                <span className="mx-2 text-sm">Volunteering</span>
               </Link>
             </li>
             <li
+              data-aos-delay="600"
               className={`nav-item 
                 ${inView === "aboutMe" && "navbar-item-in-view"}`}
             >
               <Link
-                className="px-3 py-2 flex items-center text-xs uppercase  leading-snug text-gray-300 hover:opacity-75"
+                className="px-2 py-2 flex items-center text-xs   leading-snug text-gray-300 hover:opacity-75"
                 to="footer-container"
                 smooth={true}
                 duration={700}
               >
-                <span className="mx-2 text-lg">CONTACT</span>
+                <span className="mx-2 text-sm">About Me</span>
               </Link>
             </li>
           </ul>
