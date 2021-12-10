@@ -1,19 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.4e4acf74.chunk.css",
-    "main.js": "/static/js/main.0fdf151d.chunk.js",
-    "main.js.map": "/static/js/main.0fdf151d.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.9376123b.js",
-    "runtime-main.js.map": "/static/js/runtime-main.9376123b.js.map",
-    "static/js/2.eca9a1c3.chunk.js": "/static/js/2.eca9a1c3.chunk.js",
-    "static/js/2.eca9a1c3.chunk.js.map": "/static/js/2.eca9a1c3.chunk.js.map",
-    "static/js/3.9bc50a26.chunk.js": "/static/js/3.9bc50a26.chunk.js",
-    "static/js/3.9bc50a26.chunk.js.map": "/static/js/3.9bc50a26.chunk.js.map",
+    "main.css": "/static/css/main.bb713d54.chunk.css",
+    "main.js": "/static/js/main.5498e00e.chunk.js",
+    "main.js.map": "/static/js/main.5498e00e.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.3416a1f9.js",
+    "runtime-main.js.map": "/static/js/runtime-main.3416a1f9.js.map",
+    "static/js/2.e5b3caed.chunk.js": "/static/js/2.e5b3caed.chunk.js",
+    "static/js/2.e5b3caed.chunk.js.map": "/static/js/2.e5b3caed.chunk.js.map",
+    "static/js/3.70072d29.chunk.js": "/static/js/3.70072d29.chunk.js",
+    "static/js/3.70072d29.chunk.js.map": "/static/js/3.70072d29.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.4e4acf74.chunk.css.map": "/static/css/main.4e4acf74.chunk.css.map",
-    "static/js/2.eca9a1c3.chunk.js.LICENSE.txt": "/static/js/2.eca9a1c3.chunk.js.LICENSE.txt",
+    "static/css/main.bb713d54.chunk.css.map": "/static/css/main.bb713d54.chunk.css.map",
+    "static/js/2.e5b3caed.chunk.js.LICENSE.txt": "/static/js/2.e5b3caed.chunk.js.LICENSE.txt",
     "static/media/index.css": "/static/media/Valorant.86ec8370.ttf",
-    "static/media/arrows-down.c83880b7.svg": "/static/media/arrows-down.c83880b7.svg",
     "static/media/codechefdmce.63236a98.jpeg": "/static/media/codechefdmce.63236a98.jpeg",
     "static/media/gdscdmce.446263b4.jpeg": "/static/media/gdscdmce.446263b4.jpeg",
     "static/media/geofencing.d4526114.png": "/static/media/geofencing.d4526114.png",
@@ -23,9 +22,9 @@
     "static/media/yk-logo.79fac673.svg": "/static/media/yk-logo.79fac673.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.9376123b.js",
-    "static/js/2.eca9a1c3.chunk.js",
-    "static/css/main.4e4acf74.chunk.css",
-    "static/js/main.0fdf151d.chunk.js"
+    "static/js/runtime-main.3416a1f9.js",
+    "static/js/2.e5b3caed.chunk.js",
+    "static/css/main.bb713d54.chunk.css",
+    "static/js/main.5498e00e.chunk.js"
   ]
 }
