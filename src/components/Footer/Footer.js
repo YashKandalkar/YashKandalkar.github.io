@@ -1,7 +1,7 @@
 import { createRef, forwardRef, useEffect, useState } from "react";
 import "./Footer.css";
 import yash from "../../assets/yash.jpg";
-import { Figma, Triangle } from "@geist-ui/react-icons";
+import { Triangle } from "@geist-ui/react-icons";
 
 const Accent = ({ children }) => (
   <span className="text-accent">{children}</span>
