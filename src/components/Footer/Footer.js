@@ -29,7 +29,7 @@ const Footer = forwardRef((_, ref) => {
       <section
         ref={ref}
         id="footer-container"
-        className="px-2 sm:px-10 md:px-28 lg:px-40 mt-8 pt-8 pb-20 relative"
+        className="px-10 md:px-28 lg:px-40 mt-2 pt-8 pb-20 relative"
       >
         <div className="mt-12 mb-16 w-full relative flex flex-row items-center">
           <h1
@@ -169,7 +169,7 @@ const Footer = forwardRef((_, ref) => {
               </ul>
             </div>
           </div>
-          <div className="w-80 mx-auto mt-8 lg:mt-0 lg:mx-0 relative h-80 lg:h-0">
+          <div className="w-4/5 xs:w-80 mx-auto mt-8 lg:mt-0 lg:mx-0 relative h-80 lg:h-0">
             <img
               src={yash}
               ref={imgRef}
@@ -197,7 +197,7 @@ const Footer = forwardRef((_, ref) => {
           </div>
         </div>
       </section>
-      <div className="flex justify-center items-center text-center font-mono text-xs mb-12 text-gray-400">
+      <div className="px-10 flex justify-center items-center text-center font-mono text-xs mb-12 text-gray-400">
         <p>
           Design inspired by{" "}
           <Accent>

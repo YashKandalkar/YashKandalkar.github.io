@@ -1,9 +1,8 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-scroll";
 import ykLogo from "../../assets/yk-logo.svg";
 import "./NavBar.css";
+import { Menu, X } from "@geist-ui/react-icons";
 
 const NavBar = ({ inView, fixNavbar }) => {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
@@ -22,32 +21,27 @@ const NavBar = ({ inView, fixNavbar }) => {
       }}
     >
       <div className="container mx-auto flex flex-wrap items-center justify-between">
-        <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
+        <div className="w-full relative flex justify-between md:w-auto md:static md:block md:justify-start">
           <img src={ykLogo} alt={"logo"} style={{ width: 50 }} />
 
           <button
-            className="text-gray-300 cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+            className="text-gray-300 cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block md:hidden outline-none focus:outline-none"
             type="button"
             onClick={() => setNavbarOpen(!navbarOpen)}
           >
-            {navbarOpen ? (
-              <FontAwesomeIcon icon={faTimes} className="mx-1" />
-            ) : (
-              <FontAwesomeIcon icon={faBars} className="mx-1" />
-            )}
+            {navbarOpen ? <X className="mx-1" /> : <Menu className="mx-1" />}
           </button>
         </div>
         <div
-          className={`lg:flex flex-grow items-center ${
+          className={`md:flex flex-grow items-center ${
             navbarOpen ? "flex" : "hidden"
           }`}
         >
           <ul
             style={{ fontFamily: "Inter" }}
-            className="flex navList flex-col w-full items-center lg:flex-row list-none lg:ml-auto lg:justify-end"
+            className="flex navList flex-col w-full items-center md:flex-row list-none md:ml-auto md:justify-end"
           >
             <li
-              data-aos-delay="8000"
               className={`nav-item ${
                 inView === "landing" && "navbar-item-in-view"
               }`}
@@ -62,7 +56,6 @@ const NavBar = ({ inView, fixNavbar }) => {
               </Link>
             </li>
             <li
-              data-aos-delay="200"
               className={`nav-item 
                 ${inView === "projects" && "navbar-item-in-view"}`}
             >
@@ -76,7 +69,6 @@ const NavBar = ({ inView, fixNavbar }) => {
               </Link>
             </li>
             <li
-              data-aos-delay="400"
               className={`nav-item 
                 ${inView === "volunteering" && "navbar-item-in-view"}`}
             >
@@ -90,7 +82,6 @@ const NavBar = ({ inView, fixNavbar }) => {
               </Link>
             </li>
             <li
-              data-aos-delay="600"
               className={`nav-item 
                 ${inView === "aboutMe" && "navbar-item-in-view"}`}
             >

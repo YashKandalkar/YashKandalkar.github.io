@@ -1,6 +1,4 @@
-import { faExclamationCircle } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Code, ExternalLink } from "@geist-ui/react-icons";
+import { AlertTriangleFill, Code, ExternalLink } from "@geist-ui/react-icons";
 import { createRef, useEffect, useState } from "react";
 import ReactTooltip from "react-tooltip";
 
@@ -87,12 +85,12 @@ const ProjectItem = ({
         ${parity % 2 ? "right-0" : "left-0"}
         w-full mdlg:w-4/6
         `}
-          style={{ backgroundColor: "rgba(10, 25, 47, 0.95)" }}
+          style={{ backgroundColor: "rgba(10, 25, 47, 0.80)" }}
         >
           <div
             className={`${
               parity % 2 && "mdlg:ml-auto"
-            } mr-2 mb-2 ml-8 sm:ml-0 mt-4 text-base text-gray-600`}
+            } mr-2 mb-2 ml-8 sm:ml-0 mt-4 text-base text-gray-300`}
             style={{
               fontFamily: "Calibre",
               fontWeight: 100,
@@ -172,11 +170,16 @@ const ProjectItem = ({
               "Sometimes, this project may load slowly,<br/>or not load at all due to Heroku's limited dyno hours!"
             }
             data-for={"tip-" + parity}
-            className={`absolute mt-1 mx-2 z-20 text-red-500 top-0 ${
+            className={`absolute mt-1 mx-2 z-20 top-0 ${
               parity % 2 ? "left-0" : "right-0"
             }`}
+            style={{ background: "transparent !important" }}
           >
-            <FontAwesomeIcon icon={faExclamationCircle} />
+            <AlertTriangleFill
+              size={20}
+              color={"rgba(239, 68, 68, 1)"}
+              stroke={"rgba(249, 250, 251, 1)"}
+            />
           </div>
         )}
       </div>

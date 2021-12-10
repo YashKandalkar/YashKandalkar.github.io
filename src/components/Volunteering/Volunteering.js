@@ -66,7 +66,7 @@ const Volunteering = forwardRef((_, ref) => {
     <section
       ref={ref}
       id="skills-container"
-      className="mt-8 px-2 sm:px-10 md:px-16 lg:px-40  pt-8 relative"
+      className="mt-8 px-10 md:px-16 lg:px-40  pt-8 relative"
     >
       <div className="mt-12 mb-16 w-full relative flex flex-row items-center">
         <h1
@@ -147,7 +147,7 @@ const Volunteering = forwardRef((_, ref) => {
           href="https://github.com/YashKandalkar"
           className={`cursor-pointer accentButton transition-all duration-200
           block bg-transparent border-2 px-4 shadow-sm
-          mb-6 py-2 rounded-md whitespace-nowrap`}
+          mb-6 py-2 rounded-md whitespace-nowrap mt-8 md:mt-2`}
         >
           {"More on GitHub ->"}
         </a>

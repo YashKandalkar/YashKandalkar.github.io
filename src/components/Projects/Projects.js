@@ -44,7 +44,7 @@ const Projects = forwardRef((_, ref) => {
     <section
       ref={ref}
       id="projects-container"
-      className="relative pt-8 mx-2 bg-primaryDarkBlue sm:mx-10 md:mx-16 lg:mx-40"
+      className="relative pt-8 bg-primaryDarkBlue mx-10 md:mx-16 lg:mx-40"
     >
       <div className="text-center mt-12 bg-primaryDarkBlue relative flex flex-row items-center">
         <h1

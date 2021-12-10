@@ -105,7 +105,7 @@ const Landing = forwardRef(({ fixNavbar, inView }, ref) => {
           <div
             data-aos="fade-up"
             data-aos-delay="12400"
-            className="flex items-center flex-row mt-7"
+            className="flex items-center flex-row mt-7    "
           >
             <a
               className="mr-3 text-gray-50"
