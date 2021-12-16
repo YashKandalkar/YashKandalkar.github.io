@@ -19,13 +19,28 @@ const openSourceItems = [
     repoLink: "https://github.com/supabase/supabase",
     prDesc: (
       <>
-        Developed a <Accent>full-stack</Accent> To-Do app example using
-        Supabase as an example <Accent>create-react-app</Accent> project.
+        Developed a <Accent>full-stack</Accent> To-Do web app using Supabase as
+        an example <Accent>create-react-app</Accent> project.
       </>
     ),
     prsLink:
-      "https://github.com/pulls?user=supabase&q=is%3Apr+author%3AYashKandalkar+archived%3Afalse+is%3Aclosed&user=supabase",
+      "https://github.com/supabase/supabase/pulls?q=is%3Apr+author%3AYashKandalkar+archived%3Afalse",
     tags: ["React", "Serverless", "Supabase"],
+  },
+  {
+    logo: supabase,
+    name: "supabase/ui",
+    desc: "Open-Source component library",
+    repoLink: "https://github.com/supabase/ui",
+    prDesc: (
+      <>
+        Refactored old code. Added new <Accent>unit tests</Accent> for
+        components. Fix old <Accent>test</Accent> issues.
+      </>
+    ),
+    prsLink:
+      "https://github.com/supabase/ui/pulls?q=is%3Apr+author%3AYashKandalkar+",
+    tags: ["React", "Unit-Testing", ""],
   },
   {
     logo: skift,
@@ -40,7 +55,7 @@ const openSourceItems = [
       </>
     ),
     prsLink:
-      "https://github.com/pulls?q=is%3Apr+author%3AYashKandalkar+archived%3Afalse+is%3Aclosed+user%3Askiftos",
+      "https://github.com/skiftOS/skift/pulls?q=is%3Apr+author%3AYashKandalkar",
     tags: ["C++", "coreutils", "OS"],
   },
   {
@@ -56,7 +71,7 @@ const openSourceItems = [
       </>
     ),
     prsLink:
-      "https://github.com/pulls?q=is%3Apr+author%3AYashKandalkar+archived%3Afalse+is%3Aclosed+user%3Aoppia+",
+      "https://github.com/oppia/oppia/pulls?q=is%3Apr+author%3AYashKandalkar",
     tags: ["TypeScript", "Angular", ""],
   },
 ];
@@ -131,7 +146,7 @@ const Volunteering = forwardRef((_, ref) => {
         </h1>
       </div>
 
-      <div className="flex flex-row gap-4 flex-wrap justify-center items-center mx-2">
+      <div className="flex flex-row gap-x-8 flex-wrap justify-center items-center mx-2 sm:mx-16">
         {openSourceItems.map((el, ind) => (
           <OpenSourceItem key={ind} idx={ind} {...el} />
         ))}
