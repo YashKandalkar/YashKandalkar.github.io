@@ -60,7 +60,6 @@ const Projects = forwardRef((_, ref) => {
           style={{
             width: "40vmax",
             height: 1,
-            // backgroundColor: "#6c82b9",
           }}
           className="mb-3 bg-lightestNavy"
         />

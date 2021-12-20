@@ -8,10 +8,6 @@
   background-repeat: no-repeat; */
 }
 
-.changing-line {
-  /* animation: changing-line 5s infinite; */
-}
-
 #about-me-button::before {
   width: 0;
   height: 0;
@@ -35,29 +31,6 @@
   right: -35px;
   top: 0;
 }
-/* 
-@keyframes changing-line {
-  0% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  79% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  80% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  90% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-} */
 
 @media only screen and (max-width: 1280px) {
   #landing-container {

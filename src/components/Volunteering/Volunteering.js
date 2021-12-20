@@ -130,7 +130,6 @@ const Volunteering = forwardRef((_, ref) => {
           style={{
             width: "100%",
             height: 1,
-            // backgroundColor: "#6c82b9",
           }}
           className="mb-3 bg-lightestNavy"
         />

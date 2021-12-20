@@ -3,11 +3,6 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Valorant";
-  src: local("Valorant"), url(./assets/Valorant.ttf) format("truetype");
-}
-
-@font-face {
   font-family: "Calibre";
   src: url(./assets/calibre/CalibreRegularItalic.otf) format("opentype");
   font-weight: normal;

@@ -6,8 +6,6 @@
 }
 
 .nav-item {
-  /* border-top-left-radius: 6px;
-  border-bottom-right-radius: 6px; */
   transition: all 0.3s ease;
 }
 
@@ -17,7 +15,6 @@
 }
 
 .navbar-item-in-view {
-  /* border-top: #54c3cc solid 2px;*/
   border-bottom: #41b7bf solid 2px;
 }
 

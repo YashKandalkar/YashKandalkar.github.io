@@ -195,10 +195,7 @@ const TechnologyBadge = ({ techName }) => {
         className="rounded-sm techBadge py-1 px-2"
         style={{ backgroundColor: "#41b7bf" }}
       >
-        <p
-          className="text-xs whitespace-nowrap text-primaryDarkBlue"
-          // style={{ fontSize: "0.7rem" }}
-        >
+        <p className="text-xs whitespace-nowrap text-primaryDarkBlue">
           {techName}
         </p>
       </div>
