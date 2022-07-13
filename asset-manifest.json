@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.49148b60.chunk.css",
-    "main.js": "/static/js/main.174c33cb.chunk.js",
-    "main.js.map": "/static/js/main.174c33cb.chunk.js.map",
+    "main.js": "/static/js/main.6a46ce00.chunk.js",
+    "main.js.map": "/static/js/main.6a46ce00.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.e7f5afc5.js",
     "runtime-main.js.map": "/static/js/runtime-main.e7f5afc5.js.map",
     "static/js/2.f3a186aa.chunk.js": "/static/js/2.f3a186aa.chunk.js",
@@ -18,13 +18,13 @@
     "static/media/geofencing.d4526114.png": "/static/media/geofencing.d4526114.png",
     "static/media/search-engine.7ef7ff45.png": "/static/media/search-engine.7ef7ff45.png",
     "static/media/track-your-day.c667e3d7.png": "/static/media/track-your-day.c667e3d7.png",
-    "static/media/yash.13d8f432.jpg": "/static/media/yash.13d8f432.jpg",
+    "static/media/yash.df45e4d1.jpg": "/static/media/yash.df45e4d1.jpg",
     "static/media/yk-logo.79fac673.svg": "/static/media/yk-logo.79fac673.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.e7f5afc5.js",
     "static/js/2.f3a186aa.chunk.js",
     "static/css/main.49148b60.chunk.css",
-    "static/js/main.174c33cb.chunk.js"
+    "static/js/main.6a46ce00.chunk.js"
   ]
 }
