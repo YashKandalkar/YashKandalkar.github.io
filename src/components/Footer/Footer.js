@@ -108,6 +108,15 @@ const Footer = forwardRef((_, ref) => {
                     color="rgb(65, 183, 191)"
                     strokeWidth={4}
                   />
+                  VueJS
+                </li>
+                <li className="flex items-center">
+                  <Triangle
+                    size={8}
+                    className="transform mr-2 rotate-90 text-accent"
+                    color="rgb(65, 183, 191)"
+                    strokeWidth={4}
+                  />
                   React Native
                 </li>
                 <li className="flex items-center">
@@ -126,7 +135,7 @@ const Footer = forwardRef((_, ref) => {
                     color="rgb(65, 183, 191)"
                     strokeWidth={4}
                   />
-                  Arduino
+                  Arduino (IoT)
                 </li>
               </ul>
               <ul className="font-mono flex flex-col gap-2 text-sm whitespace-nowrap text-gray-400">
